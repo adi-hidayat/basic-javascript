@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+</head>
+<body>
+Kadang kita hanya butuh menggunakan kondisi sederhana di if statementl, seperti hanya menggunakan perbandingan
+Switch adalah statement percabangan yang sama dengan if, namun lebih sederhana cara pembuatannya
+Kondisi di switch statement hanya untuk perbandingan ==
+</body>
+
+<script>
+    let dataType = ['Mahasiswa', 'Dosen'];
+
+    let dataMhs = ['Adi', 'Andi', 'Ridwan'];
+
+    let dataDsn = ['M. Sufri', 'Maulana', 'Gibran'];
+
+    let dataNilai = {
+        'logika_algoritma' : {
+            'Adi Hidayat' : '90',
+            'Edi Rahmayadi' : '70',
+            'Irfan Maulana' : '80',
+            'Beri Maulana' : '30'
+        },
+    }
+
+    for(let i=0; i<dataType.length; i++)
+    {
+        switch (dataType[i]) {
+            case "Mahasiswa" :
+                for(let iM = 0; iM<dataMhs.length; iM++){
+                    console.log(dataType[i] + " : " + dataMhs[iM]);
+                }
+
+                break;
+            case "Dosen" :
+                for(let iD=0; iD<dataDsn.length; iD++){
+                    console.log(dataType[i] + " : Pak " + dataDsn[iD]);
+                }
+                break;
+            default :
+                console.log("Mau menampilkan data mana kamu?")
+        }
+    }
+
+    let matkul_algoritma = dataNilai.logika_algoritma;
+    for (const mahasiswa in matkul_algoritma) {
+        let namaMahasiswa = mahasiswa;
+        let grade = getGradeNilai(matkul_algoritma[mahasiswa]);
+        switch (grade) {
+            case 'A' :
+                console.log(namaMahasiswa + `: ${matkul_algoritma[mahasiswa]} Lulus dengan sangat Baik`);
+                break;
+            case 'B' :
+                console.log(namaMahasiswa + `: ${matkul_algoritma[mahasiswa]} Lulus dengan Baik`);
+                break;
+            case 'C' :
+                console.log(namaMahasiswa + `: ${matkul_algoritma[mahasiswa]} Lulus Cukup`);
+                break;
+            default :
+                console.log(namaMahasiswa + `: ${matkul_algoritma[mahasiswa]} Tidak Lulus`);
+        }
+    }
+
+    function getGradeNilai(value)
+    {
+        let nilai = Number(value);
+        if(nilai >= 90){
+            return 'A';
+        } else if(nilai >= 80 && nilai < 90){
+            return 'B';
+        } else if(nilai >= 70){
+            return 'C';
+        } else {
+            return 'D';
+        }
+    }
+
+</script>
+
+</html>

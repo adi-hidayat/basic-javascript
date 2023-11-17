@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Generator Function</title>
+</head>
+
+<body>
+<h2>Generator Function</h2>
+- Function generator adalah function yang digunakan untuk membuat data generator <br>
+- Generator adalah data yang bisa di interasi seperti Array <br>
+- Untuk membuat function generator, kita perlu menggunakan tanda * (bintang) setelah kata
+  function <br>
+- Dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield dikuti datanya
+</body>
+
+<script>
+function* createProducts()
+{
+    yield "Indomie";
+    yield "Popmie";
+    yield "Sarimi";
+}
+
+let products = createProducts();
+
+console.log(products);
+
+// hanya bisa diiterasi tetapi tidak bisa diakses menggunakan index
+for (const product of products)
+{
+    console.log(product);
+}
+
+// contoh lain
+function* oddValue(value) {
+    for (let i = 1; i <= value; i++) {
+        if (i % 2 === 1) {
+            yield  i;
+        }
+    }
+}
+
+const oddValues = oddValue(10);
+
+for (const value of oddValues)
+{
+    console.log(value);
+}
+
+// function generator sifatnya eager bukan lazy
+</script>
+
+</html>

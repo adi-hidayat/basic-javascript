@@ -1,0 +1,31 @@
+
+<html>
+<head>
+    <title>Function Default Parameter</title>
+</head>
+
+<body>
+<h2>Function Default Parameter</h2>
+- Sekarang kita tahu bahwa parameter itu optional, artinya kita bisa tidak member value terhadap
+  parameter <br>
+- Parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke
+  parameter atau kita mengirim data undefined, maka secara otomatis parameter akan disi ole
+  default value
+</body>
+
+<script>
+    function sayHello(name = "Guest")
+    {
+        return "Hello " + name;
+    }
+
+    let hello1 = sayHello("Adi");
+    let hello2 = sayHello();
+
+    console.info(hello1);
+    console.info(hello2);
+</script>
+
+</html>
+
+

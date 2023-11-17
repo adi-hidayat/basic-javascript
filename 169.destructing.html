@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Destructuring</title>
+</head>
+
+<body>
+<h2>Destructuring</h2>
+- Destructuring adalah fitur, yang bisa digunakan untuk membongkar value-value di array atau
+object ke dalam variable-variable <br>
+- Fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tapa harus
+melakukan pengambilan data satu persatu
+
+<h2>Destructuring Function Parameter</h2>
+- Destructuring tidak hanya bisa dilakukan di variable, tapi juga bisa dilakukan di function parameter <br>
+- Hal ini membuat kita mudah ketika ingin mengambil nested data dalam array atau object dalam
+  function
+
+<h2>Default Value</h2>
+- Yang paling menarik di destructuring adalah, kita bisa menambahkan default value <br>
+- Jadi misal kita kita melakukan destructuring terhadap array, ternyata tidak ada datanya, maka kita
+bisa menambahkan default value <br>
+- Begitu juga pada object, jika ternyata property nya tidak ada, maka kita bisa menambahkan default
+value
+
+<h2>Menggunakan Nama Variable Lain</h2>
+- Saat melakukan destructuring di Array, kita bisa dengan mudah membuat nama variable sesuka
+kita <br>
+- Namun pada saat melakukan destructuring, kita harus membuat nama variable sama dengan nama
+property <br>
+- Kita juga bisa menggunakan nama variable lain saat melakukan destructuring object jika kita mau
+
+</body>
+
+<script>
+// contoh mengambil data satu persatu
+const names = ["Adi", "Hidayat"];
+const firstName = names[0];
+const lastName = names[1];
+
+console.info(firstName)
+console.info(lastName)
+
+
+// menggunakan destructuring
+
+// Destructuring Array
+const products = ['Mie Goreng', 'Bakso', 'Kwetiau', 'Mie Ayam'];
+
+const [mie, bakso, kwetiau, ...data] = products;
+
+console.info(mie);
+console.info(data);
+
+// Destructuring object
+{ // block scope supaya beda scope dengan kode diatas mengatasi variable dengan nama yang sama
+    const person = {
+        personFirstName : "Adi",
+        personLastName : "Hidayat",
+        personAddress : {
+            city : "Lampung",
+            country : "Indonesia"
+        }
+    };
+
+    let {personFirstName, personLastName, personAddress : {city, country}} = person;
+    console.info(personFirstName);
+    console.info(personLastName);
+    console.info(city);
+    console.info(country);
+
+// Destructuring Function Parameter
+    function displayPersonInfo({personFirstName, personLastName, personAddress}) {
+        console.info('--- PERSON INFORMATION ---')
+        console.info(personFirstName);
+        console.info(personLastName);
+        console.info(city);
+        console.info(country);
+    }
+
+    displayPersonInfo(person);
+
+    function sum([first, second])
+    {
+        return first + second;
+    }
+
+    console.info(sum([1,2]));
+}
+
+// Destructuring Default Value
+{
+    const names = ["Adi", "Hidayat", "S.Kom"];
+                                //default value
+    const [firstName, lastName, title = ""] = names;
+
+    console.info(firstName, lastName, title);
+}
+
+// Destructuring with Variable name
+{
+    const person = {
+        firstName : "Adi",
+        lastName : "Hidayat"
+    }
+
+    let {firstName:namaDepan, lastName:namaBelakang} = person;
+
+    console.log(namaDepan, namaBelakang);
+}
+
+</script>
+
+
+</html>

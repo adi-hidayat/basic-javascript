@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Object Method</title>
+</head>
+
+<body>
+<h2>Object Method</h2>
+- Pada tipe data object, kita sudah membahas tentang property di object <br>
+- Karena sebenarnya function juga merupakan salah satu tipe data, jadi function pun sebenarnya
+  bisa ditambahkan sebagai property di object <br>
+- Cara pembuatannya pun sama dengan function sebagai value <br>
+- Function di object kadang disebut juga sebagai Object Method
+</body>
+
+<script>
+    const person = {
+        name : "Adi Hidayat",
+        gender : "M",
+        getGender : function()
+        {
+            if (this.gender === "M") {
+                return "Male";
+            }
+
+            return "Female";
+        }
+    }
+
+    console.log(person.getGender());
+
+    // menambahkan method ke dalam object
+    person.sayHello = function()
+    {
+        return "Hello " + this.name;
+    }
+
+    console.log(person.sayHello());
+</script>
+
+</html>

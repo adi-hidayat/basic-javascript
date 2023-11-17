@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String template</title>
+</head>
+<body>
+
+</body>
+  <script>
+      const firstName = "Adi";
+      const muka = "ganteng";
+      const fullName = `${firstName} Hidayat ${muka ? muka : "jelek"}`;
+
+      alert(fullName);
+
+      //jika menggunakan backtick maka bisa multi line tanpa perlu tag p br dan sejenisnya
+      const multiLine = `Nama Saya ${fullName}
+      wajah saya ${muka}
+      `;
+
+      alert(multiLine);
+  </script>
+</html>

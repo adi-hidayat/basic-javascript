@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chainig</title>
+</head>
+<body>
+- optional chaining operator (?) merupakan operator yang digunakan untuk mengamankan ketika kita ingin mengakses property
+sebuah object dari data nullish<br>
+- jika kita mencoba mengakses properti dari sebuah object dari data nullish tanpa menggunakan optional chaining operator maka
+akan terjadi error
+<br>
+</body>
+<script>
+//contoh
+const person = {
+  address : {
+    postal_code : '70193'
+  }
+};
+//akses langsung ke attribute atau properti yg tidak tersedia
+
+//error
+//alert(person.address.country);
+
+//untuk menghindari error karena attribute tidak tersedia lebih mudah dibanding menggunakan if maka gunakan optional chaining seperti beirikut :
+document.write('Negara : ' + person?.address?.country + '<br>');
+
+//data yang ada
+document.write('Kode Pos : ' + person?.address?.postal_code + '<br>');
+</script>
+</html>

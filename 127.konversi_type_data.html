@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi tipe data</title>
+</head>
+<body>
+
+</body>
+<script>
+    // parseInt(string) mengkonversi dari string ke number (bilangan bulat)
+    // parseFloat(string) mengkonversi dari strinng ke number (bilangan pecahan)
+    // Number(string) mengkonversi dari string ke number (bilangan bulat atau pecahan)
+    // variable.toString(); mengkonversi dari number ke string
+
+    let number = 1;
+    let numberString = '1';
+
+    numberString = parseInt(numberString);
+    document.writeln(typeof numberString);
+    document.writeln("<br>");
+    number = number.toString();
+    document.writeln(typeof number);
+
+    const val1 = "1";
+    const val2 = 1;
+    const hasil = val1 + val2;
+
+    //maka hasil akan 11 karena tipe data string + number (11)
+    document.writeln("Hasil : " + hasil + "<br>");
+
+    //yang harus dilakukan adalah mengkonversinya
+    const hasil2 = parseInt(val1) + val2;
+    document.writeln("Hasil : " + hasil2);
+
+
+</script>
+</html>

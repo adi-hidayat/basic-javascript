@@ -1,0 +1,35 @@
+
+
+<html>
+<head>
+    <title>Function Anonymous</title>
+</head>
+
+<body>
+<h2>Function Anonymous</h2>
+- Sebelumnya kita selalu membuat function dengan nama <br>
+- Kita juga bisa membuat function tapa nama function, atau istilahnya adalah anonymous function <br>
+- Kita bisa buat anonymous function dalam sebuah variable atau bisa juga kita buat ketika mengisi
+parameter
+</body>
+
+<script>
+
+    let say = function(name) {
+        console.log("Hello " + name);
+    }
+
+    say("Adi")
+
+    // anonymous function sebagai parameter
+    function sayHelloToMe(callback)
+    {
+        callback("Adi")
+    }
+
+    sayHelloToMe(function (name) {
+        console.info(name);
+    })
+</script>
+
+</html>

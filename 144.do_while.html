@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>While Loop</title>
+</head>
+
+<body>
+<h2>Do While Loop</h2>
+- Do While loop adalah perulangan yang mirip dengan while <br>
+- Perbedaannya hanya pada pengecekan kondisi <br>
+- Pengecekan kondisi di while loop dilakukan di awal sebelum perulangan dilakukan, sedangkan di
+  do while loop dilakukan setelah perulangan dilakukan <br>
+- Oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi
+  tidak bernilai true
+</body>
+
+<script>
+    let counter = 0;
+
+    do {
+        counter++;
+        if (counter % 7 === 0) {
+            console.log("Ganteng");
+        }
+    } while (counter < 10) {
+        console.log(counter);
+
+    }
+
+</script>
+
+</html>

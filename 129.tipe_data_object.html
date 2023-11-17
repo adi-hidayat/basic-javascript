@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+<b>Associative array</b><br>
+- di bahasa pemrograman lain seprti php, kita bisa menggunakan index berupa tipe data lain setelah number,
+misal string<br>
+- fitur ini biasanya disebut associative array tidak didukung.<br>
+- di javascript associative array tidak didukung<br>
+- jika kita memaksa memasukkan data bukan number di index array<br>
+maka javascript akan merubah tipe data array tersebut menjadi object, dan ini bisa berbahaya
+karena beberapa operasi di array mungkin bisa berubah hasilnya
+
+<br><br>
+<b>Tipe Data Object</b><br>
+- Tipe data object adalah tipe data yang mirip dengan tipe data array <br>
+- Yang membedakan adalah index pada tipe data object bisa menggunakan string <br>
+- index di object biasanya disebut attributes atau properties, bukan index <br>
+</body>
+
+<script>
+    const orang = {};
+    console.log(typeof(orang));
+
+    // menambahkan atau mengubah attribute
+    orang['nama'] = "Adi Hidayat";
+    orang.usia = '26';
+
+    console.table(orang);
+    // hapus
+    delete orang.usia;
+    console.table(orang);
+
+    // ubah
+    orang.nama = "Andi";
+    console.table(orang);
+
+    const produk = {
+        nama : "Indomie Goreng",
+        harga : "2300",
+        rasa : "Original",
+    }
+
+    console.table(produk)
+    console.log(produk.nama);
+    console.log(produk['harga']);
+
+
+</script>
+</html>

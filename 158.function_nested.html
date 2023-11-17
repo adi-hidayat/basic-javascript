@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Function Nested</title>
+</head>
+
+<body>
+<h2>Function Nested</h2>
+- Tidak ada batasan dimana kita bisa membuat function <br>
+- Termasuk jika kita ingin membuat function di dalam sebuah function, kita bisa melakukannya <br>
+- Function yang terdapat di dalam, kita sebut inner function <br>
+- Inner function hanya bisa diakses di tempat kita membat function nya, tidak bisa diakses dari luar
+  function nya
+</body>
+
+<script>
+
+    function outer()
+    {
+        function inner()
+        {
+            console.log("inner")
+        }
+
+        inner();
+    }
+
+    outer();
+
+    // inner() tidak bisa memanggil inner diluar dimana function itu dibuat
+</script>
+
+</html>

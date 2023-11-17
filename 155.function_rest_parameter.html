@@ -1,0 +1,66 @@
+
+
+<html>
+<head>
+    <title>Function Rest Parameter</title>
+</head>
+
+<body>
+<h2>Function Rest Parameter</h2>
+- Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyak nya pada satu
+parameter, dan secara otomatis akan di konversi menjadi Array <br>
+- Untuk membuat rest parameter, ada ketentuannya <br>
+- Rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu <br>
+- Rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah,
+kecuali memang cuma ada 1 parameter <br>
+- Di bahasa pemrograman lain, ada juga yang bilang in adalah variable argument
+
+<h2>Spread Syntax</h2>
+- Kadang kita terlanjur memiliki data berupa Array <br>
+- Tapi untungnya kita juga bisa mengirim Array ke Rest Parameter <br>
+- Kita bisa gunakan ... (titik tiga kali) diikuti dengan array nya ketika memanggil function <br>
+- Fitur ini dinamakan Spread Syntax
+
+<h2>Arguments Object</h2>
+- Sebelum ada fitur rest parameter, di JavaScript sudah ada fitur yang bernama arguments object <br>
+- Ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array dengan <br>
+  menggunakan object bernama arguments arguments secara otomatis bisa digunakan di function
+- Namun perlu dingat, bahwa untuk JavaScript saat in, lebih baik disarankan menggunakan rest
+  parameter dibanding arguments object
+</body>
+
+<script>
+    function sum(name, ...data)
+    {
+        let total = 0;
+        for (const item of data) {
+            total += item;
+        }
+
+        console.log(`Total ${name} adalah ${total}`);
+    }
+
+    sum('Harga', 10000, 20000, 30000, 40000, 50000);
+
+    // Spread syntax
+    sum('Harga', ...[10000, 20000, 30000, 40000, 50000]);
+    // Spread syntax
+    let items = [10000, 20000, 30000, 40000, 50000];
+    sum('Harga', ...items);
+
+
+    // Arguments Object
+    function oldSum()
+    {
+        let total = 0;
+        for (const item of arguments) {
+            total += item;
+        }
+
+        console.info("Total is " + total);
+    }
+
+    oldSum(1,2,3,4,5);
+</script>
+
+</html>

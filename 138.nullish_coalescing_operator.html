@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+- Nullish value adalah null dan undefined
+- Nullish coalescing operator (??) adalah operator mirip dengan ternary operator menggunakan tanda tanya
+tetapi tanda tanya nya 2, yang membedakan pada kondisi, jika bernilai atau undefined baru default value di ambil
+</body>
+<script>
+    // kode tanpa nullish
+    let parameter;
+    let data = parameter;
+    if(data === undefined || data == null ){
+        data = "Nilai Default";
+    }
+
+    alert(data);
+
+    // kode dengan nullish
+    // untuk mengecek apakah variable tersebut berisi data nullish (undefined dan null) lalu berikan nilai default pada
+    // variable tersebut
+    let hasil = parameter ?? "Nilai Default";
+    alert(hasil);
+</script>
+</html>

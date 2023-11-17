@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>For Of</title>
+</head>
+
+<body>
+<h2>For Of</h2>
+- Jika For In digunakan untuk melakukan iterasi property atau index, berbeda dengan For Of, ini
+digunakan untuk melakukan iterasi terhadap isi value dari iterable object, seperti Array, String dan
+lain-lain <br>
+- For of tidak bisa digunakan untuk melakukan iterasi data di object, karena object bukanlah
+iterable.
+</body>
+
+<script>
+
+    const products = ["Indomie", "Popmie"];
+    for(const name of products)
+    {
+        console.log(`Product Name : ${name}`)
+    }
+
+    let productName = 'indomie';
+    for(const character of productName)
+    {
+        console.log(`${character}`)
+    }
+</script>
+
+</html>

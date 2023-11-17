@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Break dan Continue</title>
+</head>
+
+<body>
+<h2>Break dan Continue</h2>
+- Pada switch statement, kita sudah mengenal kata kunci break, yaitu untuk menghentikan case
+  dalam switch <br>
+- Sama dengan pada perulangan, break juga digunakan untuk menghentikan seluruh perulangan. <br>
+- Namun berbeda dengan continue, continue digunakan untuk menghentikan perulangan saat ini,
+  lalu melanjutkan ke perulangan selanjutnya <br>
+</body>
+
+<script>
+
+    for (let i = 0; i<10; i++)
+    {
+        if (i == 3) {
+            console.log("perulangan ke 3 di skip");
+            continue;
+        }
+
+        if (i == 5) {
+            console.log("perulangan terhenti ke 5")
+            break;
+        }
+
+        console.log(i);
+    }
+</script>
+
+</html>

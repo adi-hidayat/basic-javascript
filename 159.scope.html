@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Scope</title>
+</head>
+
+<body>
+<h2>Scope</h2>
+- Scope merupakan area akses sebuah data <br>
+- Ada dua jenis scope, global scope dan local scope. <br>
+- Setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut <br>
+- Data di global scope bisa diakses dari local scope, namun data di local scope hanya bisa di akses di
+  local scope tersebut atau di scope local dibawahnya (dalam kasus function dalam function)
+</body>
+
+<script>
+    // global scope
+    let a = 1;
+    function showA()
+    {
+        // local scope
+        let b = 2;
+    }
+</script>
+
+</html>

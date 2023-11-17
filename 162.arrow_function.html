@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Arrow Function</title>
+</head>
+
+<body>
+<h2>Arriow Function</h2>
+- Arrow function adalah alternatif pembuatan function yang lebih sederhana dari function biasany: <br>
+- Namun terdapat limitasi dan juga tidak bisa digunakan di semua situasi <br>
+- Dinamakan arrow function karena menggunakan tanda => (seperti panah) <br>
+- Berikut contoh beberapa kekurangan arrow function : <br>
+1. tidak memiliki fitur arguments object <br>
+2. tidak bisa menggunakan function generator <br>
+3. tidak bisa mengakses this (yang nanti akan dibahas di function di object) <br>
+4. tidak bisa mengakses super (yang nanti akan dibahas di JavaScript Object Oriented Programming)
+<h2>Arrow Function Tanpa Block</h2>
+- Jika sebuah arrow function isinya sederhana, misal hanya satu baris <br>
+- Kita bisa membuat arrow function tapa harus menggunakan block
+<h2>Arrow Function Return Value</h2>
+- Arrow function bisa mengembalikan value, sama seperti function biasanya <br>
+- Jika menggunakan block, maka kita perlu menggunakan kata kunci return <br>
+- Jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return
+<h2>Arrow Function Tanpa Kurung parameter</h2>
+- Jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+<h2>Arrow Function Sebagai Parameter</h2>
+- Karena arrow function sama seperti anonymous function <br>
+- Jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
+</body>
+
+<script>
+    const sayHello = (name) => {
+        const say = `Hello ${name}`;
+
+        console.log(say);
+    }
+
+    sayHello("Adi Ganteng");
+
+    // arrow function tanpa block
+    const sayHola = (name) => console.log(`Hola ${name}`);
+    sayHola("Adi Ganteng")
+
+    // arrow function return value
+    const sum = (value1, value2) => value1 + value2;
+    let result = sum(100, 100)
+    console.log(result);
+
+    // arrow function tanpa kurung parameter
+    const nyebut = nyebut => nyebut;
+    let sebut = nyebut("Astagfirullah")
+    console.log(sebut)
+
+    // arrow function sebagai parameter
+    function giveMeAName(callback) {
+        callback("Adi");
+    }
+
+    giveMeAName((name) => console.log(name));
+</script>
+
+</html>

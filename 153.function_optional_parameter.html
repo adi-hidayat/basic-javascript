@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <title>Function Optional Parameter</title>
+</head>
+
+<body>
+<h2>Function Optional Parameter</h2>
+- Secara default, parameter di function it optional <br>
+- Artinya kita tidak wajib mengisi value nya ketika memanggil function <br>
+- Jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomatis
+  parameter tersebut bernilai undefined
+</body>
+
+<script>
+    function sayHello(firstName, lastName)
+    {
+        return "Hello " + firstName + " " + lastName;
+    }
+
+    let hello1 = sayHello("Adi"); // tidak akan error walaupun tanpa parameter ke 2
+    let hello2 = sayHello("Adi", "Hidayat");
+
+    console.info(hello1);
+    console.info(hello2);
+</script>
+
+</html>
+
+

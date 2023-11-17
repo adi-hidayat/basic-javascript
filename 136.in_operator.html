@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+In Operator
+- In operator adalah operator yang bisa dilakukan untuk mengecek apakah sebuah properti ada di dalam object atau tidak
+- jika properti tersebut ada di object, maka hasilnya true, sedangkan jika tidak ada maka hasilnya false
+- tidak hanya di object, in juga bisa digunakan untuk mengecek index di array
+
+
+In operator mengecek properti ada atau tidak, meskipun nilai dari properti adalah null atau undefined maka tetap true
+jika properti tersebut tersedia dalam sebuah objects
+</body>
+<script>
+    const person = {
+        firstName : "Adi",
+        lastName : "Hidayat"
+    }
+
+    const result = "firstName" in person;
+    console.log(result)
+
+    const lists = [null, 'data1', null];
+    const new_result = 0 in lists;
+    console.log(new_result);
+</script>
+</html>
